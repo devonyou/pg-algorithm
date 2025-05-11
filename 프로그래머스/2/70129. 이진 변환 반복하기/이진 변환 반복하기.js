@@ -1,16 +1,16 @@
 function solution(s) {
-    const answer = [0, 0];
+    const answer1 = [0, 0];
     
     while(s !== '1'){
         const zeroCount = s.replace(/1/g, '').length;
         const length = s.replace(/0/g, '').length;
         s = toBinary(length);
         
-        answer[0]++;
-        answer[1] += zeroCount;
+        answer1[0]++;
+        answer1[1] += zeroCount;
     }
     
-    return answer;
+    return answer1;
 }
 
 function toBinary(n){
